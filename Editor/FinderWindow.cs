@@ -11,7 +11,7 @@ namespace oisinr.finder
         private Finder finder;
         private bool getSubclasses = false;
         private bool rememberPlace = false;
-
+        private Vector2 scrollPosition = Vector2.zero;
 
         [MenuItem("Window/Finder")]
         public static void ShowWindow()
@@ -73,11 +73,15 @@ namespace oisinr.finder
             EditorGUILayout.Space();
             EditorGUILayout.LabelField("Found Objects");
 
+            scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition, GUILayout.ExpandHeight(true));
+
             foreach (UnityEngine.Object obj in finder.foundObjects)
             {
                 EditorGUILayout.ObjectField(obj, obj.GetType(), true);
             }
+
+            EditorGUILayout.EndScrollView();
         }
-    }
+    } 
 }
 #endif
