@@ -1,0 +1,13 @@
+{
+  "name": "com.oisinr.finder",
+  "version": "1.0.1",
+  "displayName": "Finder",
+  "description": "A better search system",
+  "unity": "2020.3",
+  "author":{
+	  "name": "OisinR",
+	  "email": "example@unity.com",
+	  "url": "https://www.unity.com"
+  },
+  "type": "tool"
+}
